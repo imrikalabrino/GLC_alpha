@@ -13,5 +13,7 @@
         android:clickable="false"
         android:focusable="false"
         android:longClickable="false"
+        android:layout_marginLeft="?attr/actionBarSize"
+        android:layout_marginRight="?attr/actionBarSize"
         android:src="@drawable/glc_main_title" />
 </LinearLayout>
