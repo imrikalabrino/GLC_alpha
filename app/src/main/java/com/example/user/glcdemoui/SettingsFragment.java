@@ -15,6 +15,12 @@ import android.widget.PopupWindow;
  */
 
 public class SettingsFragment extends Fragment {
+    private static final String TAG = "BluetoothChatFragment";
+
+    // Intent request codes
+    private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
+    private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
+    private static final int REQUEST_ENABLE_BT = 3;
 
     View myView;
 
@@ -27,5 +33,6 @@ public class SettingsFragment extends Fragment {
         final PopupWindow popupWindow = new PopupWindow(myView, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         popupWindow.showAsDropDown(myView, 0, 0);
         return null;
+
     }
 }
