@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/glc_tint">
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="6dp"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="heyyy guy, wan bum bum?"
+            android:textColor="#ffffff"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="6dp"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
