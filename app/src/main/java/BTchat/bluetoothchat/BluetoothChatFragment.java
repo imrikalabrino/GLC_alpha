@@ -50,6 +50,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.glcdemoui.R;
+
 import BTchat.common.logger.Log;
 
 import static android.content.Context.BATTERY_SERVICE;
@@ -155,23 +157,7 @@ public class BluetoothChatFragment extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_bluetooth_chat, container, false);
-    }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        mConversationView = (ListView) view.findViewById(R.id.in);
-        mOutEditText = (EditText) view.findViewById(R.id.edit_text_out);
-        mSendButton = (Button) view.findViewById(R.id.button_send);
-        mRand = (Button) view.findViewById(R.id.Rand);
-        mHype = (Button) view.findViewById(R.id.Hyper);
-        mHypo = (Button) view.findViewById(R.id.Hypo);
-        mStop = (Button) view.findViewById(R.id.Stop);
-        Sending = false;
-    }
 
     /**
      * Set up the UI and background operations for chat.
@@ -187,117 +173,7 @@ public class BluetoothChatFragment extends Fragment {
         // Initialize the compose field with a listener for the return key
         mOutEditText.setOnEditorActionListener(mWriteListener);
 
-        // Initialize the send button with a listener that for click events
-        mSendButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Send a message using content of the edit text widget
-                View view = getView();
-                if (null != view && !Sending) {
-                    Sending = true;
-                    new CountDownTimer(120000, 1000) {
-                        String time;
-                        int sug = sim.normal(120);
 
-                        public void onTick(long millisUntilFinished) {
-                            itsTimeToStop();
-                            if (!Sending) cancel();
-                            sug = sim.normal(sug);
-                            time  = sim.GetTime();
-                            sendMessage(time + ";" + Integer.toString(sug).toString());
-                            if(!Sending) cancel();
-                        }
-
-                        public void onFinish() {
-                            Sending = false;
-                            sendMessage("done hyper!!!!");
-                        }
-                    }.start();
-                }
-            }
-        });
-
-        mRand.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Send a message using content of the edit text widget
-                View view = getView();
-                if (null != view && !Sending) {
-                    Sending = true;
-                    new CountDownTimer(30000, 1000) {
-                        String time;
-                        int sug = sim.GetSugarLevel(120);
-
-                        public void onTick(long millisUntilFinished) {
-                            itsTimeToStop();
-                            if (!Sending) cancel();
-                            sug = sim.GetSugarLevel(sug);
-                            time  = sim.GetTime();
-                            sendMessage(time + ";" + Integer.toString(sug).toString());
-                            if(!Sending) cancel();
-                        }
-
-                        public void onFinish() {
-                            Sending = false;
-                            sendMessage("done hyper!!!!");
-                        }
-                    }.start();
-                }
-            }
-        });
-
-        mHype.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Send a message using content of the edit text widget
-                View view = getView();
-                if (null != view && !Sending) {
-                    Sending = true;
-                    new CountDownTimer(30000, 1000) {
-                        String time;
-                        int sug = sim.giveMeHyper(120);
-
-                        public void onTick(long millisUntilFinished) {
-                            itsTimeToStop();
-                            if (!Sending) cancel();
-                            sug = sim.giveMeHyper(sug);
-                            time  = sim.GetTime();
-                            sendMessage(time + ";" + Integer.toString(sug).toString());
-                            if(!Sending) cancel();
-                        }
-
-                        public void onFinish() {
-                            Sending = false;
-                            sendMessage("done hyper!!!!");
-                        }
-                    }.start();
-                }
-            }
-        });
-
-        mHypo.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Send a message using content of the edit text widget
-                View view = getView();
-                if (null != view && !Sending) {
-                    Sending = true;
-                    new CountDownTimer(30000, 1000) {
-                        String time;
-                        int sug = sim.giveMeHypo(120);
-                        public void onTick(long millisUntilFinished) {
-                            itsTimeToStop();
-                            if (!Sending) cancel();
-                            sug = sim.giveMeHypo(sug);
-                            time  = sim.GetTime();
-                            sendMessage(time + ";" + Integer.toString(sug).toString());
-
-                        }
-
-                        public void onFinish() {
-                            Sending = false;
-                            sendMessage("done hyper!!!!");
-                        }
-                    }.start();
-                }
-            }
-        });
 
         // Initialize the BluetoothChatService to perform bluetooth connections
         mChatService = new BluetoothChatService(getActivity(), mHandler);
@@ -306,17 +182,6 @@ public class BluetoothChatFragment extends Fragment {
         mOutStringBuffer = new StringBuffer("");
     }
 
-    public void itsTimeToStop() {
-        mStop.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Send a message using content of the edit text widget
-                View view = getView();
-                if (null != view) {
-                    Sending = false;
-                }
-            }
-        });
-    }
 
     /**
      * Makes this device discoverable for 300 seconds (5 minutes).
@@ -539,7 +404,7 @@ public class BluetoothChatFragment extends Fragment {
      * @param data   An {@link Intent} with {@link DeviceListActivity#EXTRA_DEVICE_ADDRESS} extra.
      * @param secure Socket Security type - Secure (true) , Insecure (false)
      */
-    private void connectDevice(Intent data, boolean secure) {
+    public void connectDevice(Intent data, boolean secure) {
         // Get the device MAC address
         String address = data.getExtras()
                 .getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
@@ -549,33 +414,5 @@ public class BluetoothChatFragment extends Fragment {
         mChatService.connect(device, secure);
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.bluetooth_chat, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.secure_connect_scan: {
-                    // Launch the DeviceListActivity to see devices and do scan
-                    Intent serverIntent = new Intent(getActivity(), DeviceListActivity.class);
-                    startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE_SECURE);
-                return true;
-            }
-            case R.id.insecure_connect_scan: {
-                // Launch the DeviceListActivity to see devices and do scan
-                Intent serverIntent = new Intent(getActivity(), DeviceListActivity.class);
-                startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE_INSECURE);
-                return true;
-            }
-            case R.id.discoverable: {
-                // Ensure this device is discoverable by others
-                ensureDiscoverable();
-                return true;
-            }
-        }
-        return false;
-    }
 
 }
