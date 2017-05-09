@@ -12,7 +12,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,12 +25,13 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import comOn.*;
 
 /**
  * Created by User on 08/05/2017.
  */
 
+/*
 
 public class SettingsFragment extends Fragment {
     private static final String TAG = "BluetoothChatFragment";
@@ -44,24 +44,32 @@ public class SettingsFragment extends Fragment {
     View myView;
     private String mConnectedDeviceName = null;
 
-    /**
+    */
+/**
      * Array adapter for the conversation thread
-     */
+     *//*
+
     private ArrayAdapter<String> mConversationArrayAdapter;
 
-    /**
+    */
+/**
      * String buffer for outgoing messages
-     */
+     *//*
+
     private StringBuffer mOutStringBuffer;
 
-    /**
+    */
+/**
      * Local Bluetooth adapter
-     */
+     *//*
+
     private BluetoothAdapter mBluetoothAdapter = null;
 
-    /**
+    */
+/**
      * Member object for the chat services
-     */
+     *//*
+
     private BluetoothChatService mChatService = null;
 
 
@@ -71,8 +79,10 @@ public class SettingsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        /*myView = inflater.inflate(R.layout.settings, container, false);
-        return myView;*/
+        */
+/*myView = inflater.inflate(R.layout.settings, container, false);
+        return myView;*//*
+
         myView = LayoutInflater.from(getActivity()).inflate(R.layout.settings, null);
         final PopupWindow popupWindow = new PopupWindow(myView, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         popupWindow.showAsDropDown(myView, 0, 0);
@@ -83,18 +93,21 @@ public class SettingsFragment extends Fragment {
                 popupWindow.dismiss();
             }
         });
-        super.onCreate(savedInstanceState);
+        */
+/*super.onCreate(savedInstanceState);
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
             FragmentActivity activity = (FragmentActivity) getActivity();
             Toast.makeText(activity, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             activity.finish();
-        }
+        }*//*
+
         return null;
 
     }
 
-
+*/
+/*
     @Override
     public void onStart() {
         super.onStart();
@@ -150,11 +163,15 @@ public class SettingsFragment extends Fragment {
     };
 
 
-    /**
+    *//*
+*/
+/**
      * Sends a message.
      *
      * @param message A string of text to send.
-     */
+     *//*
+*/
+/*
     private void sendMessage(String message) {
 
 
@@ -288,12 +305,16 @@ public class SettingsFragment extends Fragment {
             }
         }
 
-        /**
+        *//*
+*/
+/**
          * Establish connection with other device
          *
          * @param data   An {@link Intent} with {@link DeviceListActivity#EXTRA_DEVICE_ADDRESS} extra.
          * @param secure Socket Security type - Secure (true) , Insecure (false)
-         */
+         *//*
+*/
+/*
         private void connectDevice(Intent data, boolean secure) {
             // Get the device MAC address
             String address = data.getExtras()
@@ -304,7 +325,9 @@ public class SettingsFragment extends Fragment {
             mChatService.connect(device, secure);
         }
 
-    };
+    };*//*
+
 
 
 }
+*/
