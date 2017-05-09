@@ -1,4 +1,20 @@
-package com.example.user.glcdemoui;
+/*
+ * Copyright (C) 2014 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package BTchat.bluetoothchat;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -16,9 +32,11 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import BTchat.common.logger.*;
+import com.example.user.glcdemoui.R;
 
 import java.util.Set;
+
+import BTchat.common.logger.Log;
 
 /**
  * This Activity appears as a dialog. It lists any paired devices and
@@ -27,7 +45,10 @@ import java.util.Set;
  * Activity in the result Intent.
  */
 public class DeviceListActivity extends Activity {
-
+    // Intent request codes
+    private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
+    private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
+    private static final int REQUEST_ENABLE_BT = 3;
     /**
      * Tag for Log
      */
@@ -42,6 +63,30 @@ public class DeviceListActivity extends Activity {
      * Member fields
      */
     private BluetoothAdapter mBtAdapter;
+    /**
+     * Name of the connected device
+     */
+    private String mConnectedDeviceName = null;
+
+    /**
+     * Array adapter for the conversation thread
+     */
+    private ArrayAdapter<String> mConversationArrayAdapter;
+
+    /**
+     * String buffer for outgoing messages
+     */
+    private StringBuffer mOutStringBuffer;
+
+    /**
+     * Local Bluetooth adapter
+     */
+    private BluetoothAdapter mBluetoothAdapter = null;
+
+    /**
+     * Member object for the chat services
+     */
+    private BluetoothChatService mChatService = null;
 
     /**
      * Newly discovered devices
@@ -51,7 +96,19 @@ public class DeviceListActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
+        if (!mBluetoothAdapter.isEnabled()) {
+            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+            // Otherwise, setup the chat session
+        } else if (mChatService == null) {
+            // Initialize the BluetoothChatService to perform bluetooth connections
+            mChatService = new BluetoothChatService(getActivity(), mHandler);
+
+            // Initialize the buffer for outgoing messages
+            mOutStringBuffer = new StringBuffer("");
+        }
         // Setup the window
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setContentView(R.layout.activity_device_list);
@@ -110,6 +167,8 @@ public class DeviceListActivity extends Activity {
         }
     }
 
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -161,13 +220,10 @@ public class DeviceListActivity extends Activity {
             // Create the result Intent and include the MAC address
             Intent intent = new Intent();
             intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
-            try {
 
-            } catch (Exception e) {
-
-            };
             // Set result and finish this Activity
             setResult(Activity.RESULT_OK, intent);
+            BluetoothChatService.connectDevice(intent,address);
             finish();
         }
     };
@@ -201,4 +257,13 @@ public class DeviceListActivity extends Activity {
         }
     };
 
+    public void connectDevice(Intent data, boolean secure) {
+        // Get the device MAC address
+        String address = data.getExtras()
+                .getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
+        // Get the BluetoothDevice object
+        BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
+        // Attempt to connect to the device
+        mChatService.connect(device, secure);
+    }
 }
