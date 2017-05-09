@@ -13,7 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
-import BTchat.common.logger.*;
+import com.example.android.common.logger.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -517,5 +517,4 @@ public class BluetoothChatService {
             }
         }
     }
-
 }

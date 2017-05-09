@@ -12,7 +12,6 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.Gravity;
@@ -30,7 +29,6 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-import BTchat.bluetoothchat.BluetoothChatFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity
@@ -61,12 +59,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        if (savedInstanceState == null) {
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            BluetoothChatFragment fragment = new BluetoothChatFragment();
-            transaction.replace(R.id.sample_content_fragment, fragment);
-            transaction.commit();
-        }
     }
 
     @Override
