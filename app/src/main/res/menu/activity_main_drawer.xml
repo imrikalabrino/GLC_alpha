@@ -4,35 +4,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_main"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/glc_mark_main"
             android:title="Current status" />
         <item
             android:id="@+id/nav_glucose"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/glc_mark_glucose"
             android:title="Glucose History" />
         <item
             android:id="@+id/nav_insulin"
-            android:icon="@drawable/ic_menu_gallery"
-
+            android:icon="@drawable/glc_mark_insulin"
             android:title="Insulin History" />
         <item
             android:id="@+id/nav_carbs"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Carbs" />
 
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Settings" />
+
+
     </group>
 
-    <item android:title="Account">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Account settings" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Emergency contacts" />
-        </menu>
-    </item>
 
 </menu>
