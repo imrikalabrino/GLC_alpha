@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import comOn.*;
 
 import java.util.Set;
 
@@ -109,6 +110,8 @@ public class DeviceListActivity extends Activity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
         super.onDestroy();
 
         // Make sure we're not doing discovery anymore
@@ -118,6 +121,7 @@ public class DeviceListActivity extends Activity {
 
         // Unregister broadcast listeners
         this.unregisterReceiver(mReceiver);
+    }
 
     /**
      * Start device discover with the BluetoothAdapter
