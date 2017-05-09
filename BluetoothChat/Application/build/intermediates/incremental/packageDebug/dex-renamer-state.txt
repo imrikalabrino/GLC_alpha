@@ -1,0 +1,7 @@
+#Tue May 09 00:25:25 IDT 2017
+base.0=C\:\\Users\\itay gersten\\Documents\\GitHub\\btNshhit\\BluetoothChat\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_38b76ee157b3651a5fb93022cafbe445e48b3b23
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\itay gersten\\Documents\\GitHub\\btNshhit\\BluetoothChat\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_71b370b02efabfb9f28c28165d035b3d00c3631d\\classes.dex
+base.1=C\:\\Users\\itay gersten\\Documents\\GitHub\\btNshhit\\BluetoothChat\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_71b370b02efabfb9f28c28165d035b3d00c3631d
+file.0=C\:\\Users\\itay gersten\\Documents\\GitHub\\btNshhit\\BluetoothChat\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_38b76ee157b3651a5fb93022cafbe445e48b3b23\\classes.dex

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8a9b7ff9baca56a9e177aa14d62b2430f1a1c8a9">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_38b76ee157b3651a5fb93022cafbe445e48b3b23\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_0f41ab4949cb34f436f14e2d1f5a42416716bd7b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\86fc26fc5b29a0f2e42e1e043c9753870d3a5a0d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f4ed954533c9c93e1302f5f19ce4e7e2df0e28a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\5f1b0f6d1a89d741e650ef53be9b8948c3845824\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_073ddb840c1fdf65f90b1aa247f71b0e51d0558a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\00dab76c560afc2887a788769958ff6b0f174202\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ed990dca7fa692cb2eb7facbb7021a9e198b469c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\362320850bea05bdb6dd2b4ef84e3a6d3f21b353\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5f823a5ad1a7479afd7f44e68ece0b7bf606ce52\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\2a06c58c1ace14c8f1944f1310a6fb92f7107298\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_015c5a5fc4f16362759f0aa09074af73b1195bf5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\aedb8322c5bf6ae1df914496ff5af256cfa83fe9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4700f436ede140fb804204f806c9cc3f08e386f4">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_195c0c4556b582446d297400bba826853295dc92\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_71b370b02efabfb9f28c28165d035b3d00c3631d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\a95d8862f2ad22b99b64b2c479ed2d397c1ea83f\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_2d91a59d8a86e9a2ca288aefea1e4e5302305276\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\00dab76c560afc2887a788769958ff6b0f174202\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_3175d7f31085458bff21d26e78c91240bbb1a898\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\a95d8862f2ad22b99b64b2c479ed2d397c1ea83f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_add7b2f659b72cb0a92c4151e4f509685a415906\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\2a06c58c1ace14c8f1944f1310a6fb92f7107298\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_315e83cc099d51f312f584d74e5b9109395e75d1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\41bffef78a6e471f2c1f2378b80e811677916c63\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4c2f044e5f372769a44a979166c29a6d4069e3e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\582b875f47e2696709cb2766b9fe6e6f8cfb4614\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6b4ed5a66792ddfd7d2496244f01806459809cd5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\9c6e7bd79b7c6adefea398ce365cc7c31993fb3d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ab24ab672a1f676f847175db14ec2b69d3e3677b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\6be87375fb224f006e98dfd980bef0d24c39abf5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b6884679eecba754591e9b4bb99185c68ce62491\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\362320850bea05bdb6dd2b4ef84e3a6d3f21b353\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_b3e5b42f13e504275580eee0b319f52b9f6533d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\itay gersten\.android\build-cache\86fc26fc5b29a0f2e42e1e043c9753870d3a5a0d\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\itay gersten\Documents\GitHub\btNshhit\BluetoothChat\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_349d6258abb214b9eca575c48a53e74f87135a50\classes.dex" />
+    </item>
+
+</items>
